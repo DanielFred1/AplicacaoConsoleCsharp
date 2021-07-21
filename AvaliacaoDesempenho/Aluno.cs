@@ -1,6 +1,6 @@
 namespace AvaliacaoDesempenho
 {
-    public class Aluno
+    public struct Aluno
     {
         public string Nome { get; set; }
 

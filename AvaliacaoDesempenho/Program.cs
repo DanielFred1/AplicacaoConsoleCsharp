@@ -34,6 +34,13 @@ namespace AvaliacaoDesempenho
                         break;
                     case "2":
                         //ToDo: lista alunos cadastrados
+                        foreach (var a in alunos)
+                        {
+                            if (!string.IsNullOrEmpty(a.Nome)) 
+                            {
+                                Console.WriteLine($"Nome Aluno: {a.Nome}  Nota Aluno: {a.Nota}");
+                            }
+                        }
                         break;
                     case "3":
                         //ToDo: calcula média geral de notas
