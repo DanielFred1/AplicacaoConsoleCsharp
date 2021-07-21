@@ -1,0 +1,16 @@
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\bin\Debug\net5.0\AvaliacaoDesempenho.exe
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\bin\Debug\net5.0\AvaliacaoDesempenho.deps.json
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\bin\Debug\net5.0\AvaliacaoDesempenho.runtimeconfig.json
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\bin\Debug\net5.0\AvaliacaoDesempenho.runtimeconfig.dev.json
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\bin\Debug\net5.0\AvaliacaoDesempenho.dll
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\bin\Debug\net5.0\ref\AvaliacaoDesempenho.dll
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\bin\Debug\net5.0\AvaliacaoDesempenho.pdb
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\obj\Debug\net5.0\AvaliacaoDesempenho.csproj.AssemblyReference.cache
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\obj\Debug\net5.0\AvaliacaoDesempenho.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\obj\Debug\net5.0\AvaliacaoDesempenho.AssemblyInfoInputs.cache
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\obj\Debug\net5.0\AvaliacaoDesempenho.AssemblyInfo.cs
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\obj\Debug\net5.0\AvaliacaoDesempenho.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\obj\Debug\net5.0\AvaliacaoDesempenho.dll
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\obj\Debug\net5.0\ref\AvaliacaoDesempenho.dll
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\obj\Debug\net5.0\AvaliacaoDesempenho.pdb
+C:\Users\Daniel\Desktop\AplicacaoConsoleCsharp\AvaliacaoDesempenho\obj\Debug\net5.0\AvaliacaoDesempenho.genruntimeconfig.cache
