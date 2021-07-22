@@ -15,30 +15,36 @@ namespace AvaliacaoDesempenho
                 {
                     case "1":
                         //ToDo: cadastra aluno
-                        Console.WriteLine("Insira o nome do aluno:");
-                        Aluno aluno = new Aluno();
-                        aluno.Nome = Console.ReadLine();
+                            Console.Clear();
+                            Console.WriteLine("Insira o nome do aluno:");
+                            Aluno aluno = new Aluno();
+                            aluno.Nome = Console.ReadLine();
 
-                        Console.WriteLine("Insira a nota do aluno:");
-                        if (decimal.TryParse(Console.ReadLine(), out decimal nota))
-                        {
-                            aluno.Nota = nota;
-                        }
-                        else
-                        {
-                            throw new ArgumentException("A nota deve ser informada em fomato decimal.");
-                        }
+                            Console.WriteLine("Insira a nota do aluno:");
+                            if (decimal.TryParse(Console.ReadLine(), out decimal nota))
+                            {
+                                aluno.Nota = nota;
+                            }
+                            else
+                            {
+                                throw new ArgumentException("A nota deve ser informada em fomato decimal.");
+                            }
 
-                        alunos[indiceAluno] = aluno;
-                        indiceAluno++;
+                            alunos[indiceAluno] = aluno;
+                            indiceAluno++;
                         break;
                     case "2":
                         //ToDo: lista alunos cadastrados
+                        Console.Clear();
                         foreach (var a in alunos)
                         {
-                            if (!string.IsNullOrEmpty(a.Nome)) 
+                            if(!string.IsNullOrEmpty(a.Nome))
                             {
-                                Console.WriteLine($"Nome Aluno: {a.Nome}  Nota Aluno: {a.Nota}");
+                                Console.WriteLine($"NOME: {a.Nome.ToUpper()} - NOTA: {a.Nota}");
+                            }
+                            else
+                            {
+                                break;
                             }
                         }
                         break;
@@ -50,14 +56,14 @@ namespace AvaliacaoDesempenho
                 }
                 
                 opcaoUsuario = MenuOpcao();
-            };
+            }
 
             Console.WriteLine("================ FIM =================");
 
         }
         private static string MenuOpcao()
             {
-                Console.Clear();
+                //Console.Clear();
                 Console.WriteLine("----------- MENU DE ALUNOS -----------");
                 Console.WriteLine("[1] Cadastrar aluno");
                 Console.WriteLine("[2] Listar alunos");
