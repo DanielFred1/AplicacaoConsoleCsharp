@@ -50,6 +50,20 @@ namespace AvaliacaoDesempenho
                         break;
                     case "3":
                         //ToDo: calcula média geral de notas
+                        Console.Clear();
+                        decimal notaTotal = 0;
+                        int totalAlunos = 0;
+                        for (var i=0; i<alunos.Length; i++)
+                        {
+                            if (!string.IsNullOrEmpty(alunos[i].Nome))
+                            {
+                                notaTotal = notaTotal + alunos[i].Nota;
+                                totalAlunos++;
+                            }
+                        }
+
+                        var mediaGeral = notaTotal / totalAlunos;
+                        Console.WriteLine($"MÉDIA GERAL DE NOTAS: {mediaGeral}");
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
