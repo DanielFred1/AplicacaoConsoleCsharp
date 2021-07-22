@@ -63,7 +63,26 @@ namespace AvaliacaoDesempenho
                         }
 
                         var mediaGeral = notaTotal / totalAlunos;
-                        Console.WriteLine($"MÉDIA GERAL DE NOTAS: {mediaGeral}");
+                        ConceitoEnum conceitoGeral = new ConceitoEnum();
+                        switch (mediaGeral)
+                        {
+                            case var n when mediaGeral < 4:
+                                conceitoGeral = ConceitoEnum.D;
+                            break;
+                            case var n when mediaGeral < 6:
+                                conceitoGeral = ConceitoEnum.D;
+                            break;
+                            case var n when mediaGeral < 8:
+                                conceitoGeral = ConceitoEnum.D;
+                            break;
+                            case var n when mediaGeral < 10:
+                                conceitoGeral = ConceitoEnum.D;
+                            break;
+                            default:
+                                Console.WriteLine("Erro no conceito");
+                            break;
+                        }
+                        Console.WriteLine($"MÉDIA GERAL DE NOTAS: {mediaGeral} - CONCEITO GERAL: {conceitoGeral}");
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
