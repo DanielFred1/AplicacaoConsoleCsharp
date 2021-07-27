@@ -14,7 +14,6 @@ namespace AvaliacaoDesempenho
                 switch (opcaoUsuario)
                 {
                     case "1":
-                        //ToDo: cadastra aluno
                             Console.Clear();
                             Console.WriteLine("Insira o nome do aluno:");
                             Aluno aluno = new Aluno();
@@ -33,57 +32,82 @@ namespace AvaliacaoDesempenho
                             alunos[indiceAluno] = aluno;
                             indiceAluno++;
                         break;
+
                     case "2":
-                        //ToDo: lista alunos cadastrados
                         Console.Clear();
-                        foreach (var a in alunos)
+                        if (indiceAluno != 0)
                         {
-                            if(!string.IsNullOrEmpty(a.Nome))
+                            foreach (var a in alunos)
                             {
-                                Console.WriteLine($"NOME: {a.Nome.ToUpper()} - NOTA: {a.Nota}");
-                            }
-                            else
-                            {
-                                break;
+                                if(!string.IsNullOrEmpty(a.Nome))
+                                {
+                                    Console.WriteLine($"NOME: {a.Nome.ToUpper()} - NOTA: {a.Nota}");
+                                }
+                                else
+                                {
+                                    break;
+                                }
                             }
                         }
+                        else
+                        {
+                            Console.WriteLine("Não há alunos cadastrados no sistema...");
+                        }
                         break;
+
                     case "3":
-                        //ToDo: calcula média geral de notas
                         Console.Clear();
                         decimal notaTotal = 0;
                         int totalAlunos = 0;
-                        for (var i=0; i<alunos.Length; i++)
-                        {
-                            if (!string.IsNullOrEmpty(alunos[i].Nome))
+                            for (var i=0; i<alunos.Length; i++)
                             {
-                                notaTotal = notaTotal + alunos[i].Nota;
-                                totalAlunos++;
+                                if (!string.IsNullOrEmpty(alunos[i].Nome))
+                                {
+                                    notaTotal = notaTotal + alunos[i].Nota;
+                                    totalAlunos++;
+                                }
+                                else
+                                {
+                                    break;
+                                }
                             }
-                        }
 
-                        var mediaGeral = notaTotal / totalAlunos;
-                        ConceitoEnum conceitoGeral = new ConceitoEnum();
-                        switch (mediaGeral)
+                        if (totalAlunos != 0)
                         {
-                            case var n when mediaGeral < 4:
-                                conceitoGeral = ConceitoEnum.D;
-                            break;
-                            case var n when mediaGeral < 6:
-                                conceitoGeral = ConceitoEnum.D;
-                            break;
-                            case var n when mediaGeral < 8:
-                                conceitoGeral = ConceitoEnum.D;
-                            break;
-                            case var n when mediaGeral < 10:
-                                conceitoGeral = ConceitoEnum.D;
-                            break;
-                            default:
-                                Console.WriteLine("Erro no conceito");
+                            var mediaGeral = notaTotal / totalAlunos;
+                            ConceitoEnum conceitoGeral = new ConceitoEnum();
+                            switch (mediaGeral)
+                            {
+                                case var n when mediaGeral < 4:
+                                    conceitoGeral = ConceitoEnum.D;
+                                    break;
+                                case var n when mediaGeral >= 4 && mediaGeral < 6:
+                                    conceitoGeral = ConceitoEnum.C;
+                                    break;
+                                case var n when mediaGeral >= 6 && mediaGeral < 8:
+                                    conceitoGeral = ConceitoEnum.B;
+                                    break;
+                                case var n when mediaGeral >= 8:
+                                    conceitoGeral = ConceitoEnum.A;
+                                    break;
+                                default:
+                                    Console.WriteLine("Erro no conceito");
+                                    break;
+                            }
+
+                            Console.WriteLine($"MÉDIA GERAL DE NOTAS: {mediaGeral,2} - CONCEITO GERAL: {conceitoGeral}");
                             break;
                         }
-                        Console.WriteLine($"MÉDIA GERAL DE NOTAS: {mediaGeral,2} - CONCEITO GERAL: {conceitoGeral}");
+                        else
+                        {
+                            Console.WriteLine("Não há alunos cadastrados no sistema...");
+                        }
                         break;
+
+                    case "4":
+                        Console.Clear();
+                        break;
+
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
@@ -101,6 +125,7 @@ namespace AvaliacaoDesempenho
                 Console.WriteLine("[1] Cadastrar aluno");
                 Console.WriteLine("[2] Listar alunos");
                 Console.WriteLine("[3] Calcular média geral de notas");
+                Console.WriteLine("[4] Limpar console");
                 Console.WriteLine("[X] Sair da aplicação");
                 Console.WriteLine("--------------------------------------");
                 Console.WriteLine();
