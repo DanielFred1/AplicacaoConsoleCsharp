@@ -82,7 +82,7 @@ namespace AvaliacaoDesempenho
                                 Console.WriteLine("Erro no conceito");
                             break;
                         }
-                        Console.WriteLine($"MÉDIA GERAL DE NOTAS: {mediaGeral} - CONCEITO GERAL: {conceitoGeral}");
+                        Console.WriteLine($"MÉDIA GERAL DE NOTAS: {mediaGeral,2} - CONCEITO GERAL: {conceitoGeral}");
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
