@@ -58,28 +58,28 @@ namespace TesteImc
                 switch (RecebeImc)
                 {
                     case var n when RecebeImc < 17:
-                    Console.WriteLine("O IMC está abaixo de 17kg/m², muito abaixo do peso.");
-                    break;
+                        Console.WriteLine("O IMC está abaixo de 17kg/m², muito abaixo do peso.");
+                        break;
                     case var n when RecebeImc >= 17 && RecebeImc < 18:
-                    Console.WriteLine("O IMC está na faixa de 17kg/m² a 18kg/m², abaixo do peso.");
-                    break;
+                        Console.WriteLine("O IMC está na faixa de 17kg/m² a 18kg/m², abaixo do peso.");
+                        break;
                     case var n when RecebeImc >= 18 && RecebeImc < 25:
-                    Console.WriteLine("O IMC está na faixa de 18kg/m² a 25kg/m², peso normal.");
-                    break;
+                        Console.WriteLine("O IMC está na faixa de 18kg/m² a 25kg/m², peso normal.");
+                        break;
                     case var n when RecebeImc >= 25 && RecebeImc < 30:
-                    Console.WriteLine("O IMC está na faixa de 25kg/m² a 30kg/m², acima do peso.");
-                    break;
+                        Console.WriteLine("O IMC está na faixa de 25kg/m² a 30kg/m², acima do peso.");
+                        break;
                     case var n when RecebeImc >= 30 && RecebeImc < 35:
-                    Console.WriteLine("O IMC está na faixa de 30kg/m² a 35kg/m², obesidade grau I.");
-                    break;
+                        Console.WriteLine("O IMC está na faixa de 30kg/m² a 35kg/m², obesidade grau I.");
+                        break;
                     case var n when RecebeImc >= 35 && RecebeImc < 40:
-                    Console.WriteLine("O IMC está na faixa de 35kg/m² a 40kg/m², obesidade grau II.");
-                    break;
+                        Console.WriteLine("O IMC está na faixa de 35kg/m² a 40kg/m², obesidade grau II.");
+                        break;
                     case var n when RecebeImc >= 40:
-                    Console.WriteLine("O IMC está acima de 40kg/m², obesidade grau III.");
-                    break;
+                        Console.WriteLine("O IMC está acima de 40kg/m², obesidade grau III.");
+                        break;
                     default:
-                    break;
+                        break;
                 }
                 Console.WriteLine("----------------------------------------------");
             }
