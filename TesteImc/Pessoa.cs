@@ -23,9 +23,9 @@ namespace TesteImc
         {
             string InformacaoPessoa = "";
             InformacaoPessoa += "Nome: " + this.Nome + Environment.NewLine;
-            InformacaoPessoa += "Massa: " + this.Massa + Environment.NewLine;
-            InformacaoPessoa += "Altura: " + this.Altura + Environment.NewLine;
-            InformacaoPessoa += "IMC: " + this.IMC + Environment.NewLine;
+            InformacaoPessoa += "Massa: " + this.Massa.ToString("F1") + Environment.NewLine;
+            InformacaoPessoa += "Altura: " + this.Altura.ToString("F2") + Environment.NewLine;
+            InformacaoPessoa += "IMC: " + this.IMC.ToString("F1") + Environment.NewLine;
             return InformacaoPessoa;
         }
 

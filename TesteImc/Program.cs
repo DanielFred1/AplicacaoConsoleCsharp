@@ -19,7 +19,24 @@ namespace TesteImc
                         Metodos.Listar();
                         break;
                     case "3":
-                    // Tabela IMC
+                        Console.WriteLine("-------------------- Índice de Massa Corporal ----------------------");
+                        Console.WriteLine();
+                        Console.WriteLine("O IMC (Índice de Massa Corporal) é um cálculo universal");
+                        Console.WriteLine("adotado pela OMS (Organização Mundial da Saúde) para classificar");
+                        Console.WriteLine("padrões de saúde relacionados ao peso, como desnutrição e obesidade,");
+                        Console.WriteLine("principalmente em populações.");
+                        Console.WriteLine();
+                        Console.WriteLine("Tabela de referência para IMC:");
+                        Console.WriteLine();
+                        Console.WriteLine("16 a 16,9 kg/m² - Muito abaixo do peso");
+                        Console.WriteLine("17 a 18,4 kg/m² - Abaixo do peso");
+                        Console.WriteLine("18,5 a 24,9 kg/m² - Peso normal");
+                        Console.WriteLine("25 a 29,9 kg/m² - Acima do peso");
+                        Console.WriteLine("30 a 34,9 kg/m² - Obesidade grau I");
+                        Console.WriteLine("35 a 40 kg/m² - Obesidade grau II");
+                        Console.WriteLine("maior que 40 kg/m² - Obesidade grau III");
+                        Console.WriteLine();
+                        Console.WriteLine("--------------------------------------------------------------------");
                         break;
                     case "4":
                         Console.Clear();
