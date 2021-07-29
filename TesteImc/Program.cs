@@ -7,45 +7,16 @@ namespace TesteImc
         static PessoaRepositorio repositorio = new PessoaRepositorio();
         static void Main(string[] args)
         {
-            string OpcaoReposta1 = OpcaoMenuInicial();
-            while (OpcaoReposta1.ToUpper() != "X")
+            string OpcaoReposta = OpcaoMenuInicial();
+            while (OpcaoReposta.ToUpper() != "X")
             {
-                switch (OpcaoReposta1)
+                switch (OpcaoReposta)
                 {
                     case "1":
-                        Console.WriteLine("Insira o nome:");
-                        string EntradaNome = Console.ReadLine();
-                        Console.WriteLine("Informe a massa (peso):");
-                        double.TryParse(Console.ReadLine(), out double EntradaMassa);
-                        Console.WriteLine("Informe a altura:");
-                        double.TryParse(Console.ReadLine(), out double EntradaAltura);
-
-                        Pessoa NovaPessoa = new Pessoa(nome: EntradaNome, massa: EntradaMassa, altura: EntradaAltura);
-                        repositorio.Insere(NovaPessoa);
+                        Metodos.Cadastrar();
                         break;
                     case "2":
-                        Console.WriteLine();
-                        var lista = repositorio.Lista();
-                        if (lista.Count != 0)
-                        {
-                            foreach (var pessoa in lista)
-                            {
-                                Console.WriteLine($"ID: {pessoa.RetornaId()} | Nome: {pessoa.RetornaNome()}");
-                            }
-                            // Console.WriteLine();
-                            // Console.WriteLine("Não há pessoas cadastradas no sistema...");
-                            // break;
-                        }
-                        else
-                        {
-                            Console.WriteLine();
-                            Console.WriteLine("Não há pessoas cadastradas no sistema...");
-                            //break;
-                            // foreach (var pessoa in lista)
-                            // {
-                            //     Console.WriteLine($"ID: {pessoa.RetornaId()} | Nome: {pessoa.RetornaNome()}");
-                            // }
-                        }
+                        Metodos.Listar();
                         break;
                     case "3":
                     // Tabela IMC
@@ -57,7 +28,7 @@ namespace TesteImc
                         Console.WriteLine("Opção selecionada não foi reconhecida.");
                         break;
                 }
-                OpcaoReposta1 = OpcaoMenuInicial();
+                OpcaoReposta = OpcaoMenuInicial();
             }
         }
 
@@ -70,17 +41,8 @@ namespace TesteImc
             Console.WriteLine("[4] Limpar console");
             Console.WriteLine("[X] Sair do sistema");
             Console.WriteLine("----------------------------------------------");
-            string OpcaoReposta1 = Console.ReadLine();
-            return OpcaoReposta1;
+            string OpcaoReposta = Console.ReadLine();
+            return OpcaoReposta;
         }
-        static string OpcaoMenuSecundario()
-        {
-            Console.WriteLine("------------- operação concluída -------------");
-            Console.WriteLine("[1] Repetir operação");
-            Console.WriteLine("[X] Retornar para o menu anterior");
-            Console.WriteLine("----------------------------------------------");
-            string OpcaoReposta2 = Console.ReadLine();
-            return OpcaoReposta2;
-        }  
     }
 }

@@ -8,13 +8,15 @@ namespace TesteImc
         public string Nome {get; set;}
         public double Massa {get; set;}
         public double Altura {get; set;}
+        public double IMC { get; set; }
 
-
-        public Pessoa(string nome, double massa, double altura)
+        public Pessoa(int id, string nome, double massa, double altura, double imc)
         {
+            Id = id;
             Nome = nome;
             Massa = massa;
             Altura = altura;
+            IMC = imc;
         }
 
         public override string ToString()
@@ -23,6 +25,7 @@ namespace TesteImc
             InformacaoPessoa += "Nome: " + this.Nome + Environment.NewLine;
             InformacaoPessoa += "Massa: " + this.Massa + Environment.NewLine;
             InformacaoPessoa += "Altura: " + this.Altura + Environment.NewLine;
+            InformacaoPessoa += "IMC: " + this.IMC + Environment.NewLine;
             return InformacaoPessoa;
         }
 

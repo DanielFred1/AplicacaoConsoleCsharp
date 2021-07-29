@@ -7,5 +7,6 @@ namespace TesteImc
         List<T> Lista();
         T RetornaPorId(int id);
         void Insere(T objeto);
+        int ProximoId();
     }
 }

@@ -21,5 +21,10 @@ namespace TesteImc
         {
             return ListaPessoa[id];
         }
+
+        public int ProximoId()
+        {
+            return ListaPessoa.Count;
+        }
     }
 }
